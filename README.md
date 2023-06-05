@@ -1,6 +1,6 @@
 # A Music Recommendation System
 
-Capstone Project for the Applied Data Science Program, MIT Professional Education
+**Capstone Project for the Applied Data Science Program, MIT Professional Education**
 
 Humans are in a constant race against time, with ever-increasing busy lives. 
 The volume of music available to us is contantly increasing, making the task of searching for new music to listen to daunting, 
