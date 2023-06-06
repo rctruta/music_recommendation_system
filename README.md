@@ -115,9 +115,9 @@ Another takeaway worth mentioning is that for a `60/40` data split, the models r
 
 The following table **summarizes the metric results** used to evaluate the models we build for our analysis. More on this analysis is presented later in the report.
 
-|metric|user-user|user-user-optimized|item-item|item-item-optimized|SVD|SVD-optimized|coCluster|coCluster-optimized
-|--:---|---------|-------------------|---------|-------------------|---|-------------|---------|-------------------|
-|RMSE  |1.088  |1.041             |  1.024  |1.02 |**1.009**|**1.009**|1.033|1.04
+|metric|user-user|user-user-optimized|item-item|item-item-optimized|SVD|SVD-optimized|coCluster|coCluster-optimized|
+|------|---------|-------------------|---------|-------------------|---|-------------|---------|-------------------|
+|RMSE  |1.088  |1.041             |  1.024  |1.02 |**1.009**|**1.009**|1.033|1.04|
 |Precision@10|1.0|1.0|1.0|1.0|1.0|1.0|1.0|1.0|
 |Recall@10|0.948|0.948|0.948|0.948|0.948|0.948|0.948|0.948|
 |Recall@20|0.994|0.994|0.994|0.994|0.994|0.994|0.994|0.994|
