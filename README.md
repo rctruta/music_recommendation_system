@@ -90,7 +90,7 @@ The `Precision@k`, `Recall@k` and `F1_score@k` are defined below:
 
   - $\text{Recall@k} = \frac{ | \{ \text{Recommended items that are relevant} \} | }{ | \{ \text{Relevant items} \} | }$
 
-  - $\text{F1_score@k} = \frac{2}{{\frac{1}{\text{Precision@k}} + {\frac{1}{\text{Recall@k}}}}}$
+  - $\text{F1@k} = \frac{2}{{\frac{1}{\text{Precision@k}} + {\frac{1}{\text{Recall@k}}}}}$
 
 An item is considered `relevant` if its true rating $r_{ui}$ is greater than a given `threshold`. 
 
