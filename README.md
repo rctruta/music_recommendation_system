@@ -226,12 +226,12 @@ We believe the system can be significantly enhanced by:
 * **Environment:** Google Colab
 
 ## Repository Structure
-
+```
 ├── music_recommendation_system_final_submission.ipynb # The main Jupyter Notebook for the project.
 ├── data/                                              # Directory for raw and processed datasets (e.g., song_data.csv, count_data.csv).
 ├── README.md                                          # This README file.
 └── requirements.txt                                   # Lists Python package dependencies for reproducibility.
-
+```
 ## Installation & How to Run
 
 To set up and run this project locally:
