@@ -128,21 +128,26 @@ These values enable comparable results across models, simplifying the deployment
 
 ## Evaluation Metrics
 
-For recommendation systems, evaluating top-N recommendations is crucial. We used **Precision@k**, **Recall@k**, and their harmonic mean, the **F1-score@k**.
+## Evaluation Metrics
+
+For recommendation systems, evaluating the top-N recommendations is crucial. Therefore, we focused on **Precision@k**, **Recall@k**, and their harmonic mean, the **F1-score@k**.
 
 **Definitions:**
 
 * **Precision@k:** The proportion of recommended items within the top-k set that are actually relevant to the user.
-    $$ \text{Precision@k} = \frac{ | \{ \text{Recommended items that are relevant} \} | }{ | \{ \text{Recommended items} \} | } $$
-* **Recall@k:** The proportion of all relevant items that were successfully found within the top-k recommendations.
-    $$ \text{Recall@k} = \frac{ | \{ \text{Recommended items that are relevant} \} | }{ | \{ \text{Relevant items} \} | } $$
-* **F1-score@k:** The harmonic mean of Precision@k and Recall@k, balancing both metrics.
-    $$ \text{F1_score@k} = \frac{2}{{\frac{1}{\text{Precision@k}} + {\frac{1}{\text{Recall@k}}}}} $$
-    * An item is considered **relevant** if its true rating `r_ui` is greater than a given threshold.
-    * An item is considered **recommended** if its estimated rating `r_hat_ui` is greater than the threshold AND it is among the k highest estimated ratings.
-    * *Note:* In edge cases where division by zero occurs, Precision@k and Recall@k values are conventionally set to 0.
+    * *Formula:* `(Number of Recommended items that are relevant) / (Total Number of Recommended items)`
 
-Our in-depth analysis varied `k` from 10 to 40. Notably, at `k = 40`, all models achieved `Precision@40 = Recall@40 = 1`, indicating 100% accuracy within the top 40 recommendations. For a `60/40` data split, models reached 100% accuracy when `k = 60`.
+* **Recall@k:** The proportion of all relevant items that were successfully found within the top-k recommendations.
+    * *Formula:* `(Number of Recommended items that are relevant) / (Total Number of Relevant items)`
+
+* **F1-score@k:** The harmonic mean of Precision@k and Recall@k, providing a single metric that balances both.
+    * *Formula:* `2 * ( (Precision@k * Recall@k) / (Precision@k + Recall@k) )`
+
+An item is considered **relevant** if its true rating `r_ui` is greater than a given threshold. An item is considered **recommended** if its estimated rating `r_hat_ui` is greater than the threshold AND it is among the `k` highest estimated ratings.
+
+*Note:* In edge cases where division by zero occurs, Precision@k and Recall@k values are conventionally set to 0.
+
+We performed an in-depth analysis of Precision@k and Recall@k by varying `k` from 10 to 40, in increments of 10. A significant takeaway is that when `k = 40`, all tested models achieved `Precision@40 = Recall@40 = 1`, indicating 100% accuracy within the top 40 recommendations. Similarly, for a `60/40` data split, models reached 100% accuracy when `k = 60`.
 
 ### Performance Metrics Summary
 
