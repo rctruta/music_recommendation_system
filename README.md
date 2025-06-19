@@ -128,8 +128,6 @@ These values enable comparable results across models, simplifying the deployment
 
 ## Evaluation Metrics
 
-## Evaluation Metrics
-
 For recommendation systems, evaluating the top-N recommendations is crucial. Therefore, we focused on **Precision@k**, **Recall@k**, and their harmonic mean, the **F1-score@k**.
 
 **Definitions:**
@@ -248,9 +246,10 @@ To set up and run this project locally:
     ```
     *(Replace `yourusername` and `your-repo-name` with your actual GitHub details.)*
 
-2.  **Create `data/` directory and place datasets:**
-    * Create a folder named `data` in the root of the repository.
-    * Place `song_data.csv` and `count_data.csv` (obtained from [Million Song Dataset](http://millionsongdataset.com/)) inside the `data/` folder.
+2.  **Obtain the datasets:**
+    * The `data/` directory in this repository contains placeholder files for `song_data.csv` and `count_data.csv`. The actual files are very large and are not directly included in this repository.
+    * Please download the **Taste Profile Subset** from the [Million Song Dataset website](http://millionsongdataset.com/).
+    * Place the downloaded `song_data.csv` and `count_data.csv` files inside the `data/` subdirectory within your cloned repository.
 
 3.  **Install dependencies:**
     * Ensure you have Python (3.6+) and `pip` installed.
@@ -270,6 +269,8 @@ To set up and run this project locally:
         ```
     * Open `music_recommendation_system_final_submission.ipynb` and run all cells to execute the analysis, modeling, and generate results.
 
+**Viewing on GitHub:**
+* You can directly view the `music_recommendation_system_final_submission.ipynb` file on GitHub, as it supports rendering Jupyter Notebooks directly in the browser.
 **Viewing on GitHub:**
 * You can directly view the `music_recommendation_system_final_submission.ipynb` file on GitHub, as it supports rendering Jupyter Notebooks directly in the browser.
 
